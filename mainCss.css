@@ -1,21 +1,121 @@
-*{background: white;}
+
+
+
+*{background: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+body, html {
+    height: 100%; /* Чтобы Flexbox мог работать на 100% высоты */
+  }
 
 .calculator{
-    margin-top: 70px;
-    text-align: center;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Центрирование по вертикали */
 }
 
 #operator_number{
     display: grid;
-    grid-template: 1fr 1fr 1fr 1fr /1fr 1fr 1fr;
-    min-height: 100vh;
-    margin-left: 30%;
-    margin-right: 30%;
+    grid-template-columns: repeat(3, 1fr);
+    height: 80vh;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* приветственное меню */
+  
+h1{
+    margin-bottom: 5%;
+    background: none;
+    
+}
+
+  .welcome-box {
+    width: 40vw;
+    height: 80vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* border-radius: 10px;  */
+    position: absolute;
+  }
+
+  #game-board {
+    display: none; /* Скрыть поле игры до начала */
+  }
+  
+  /* Кнопка для запуска игры */
+  #start-button, #bye-button {
+    z-index: 100;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+
+
+  .bye-box {
+    width: 40vw;
+    height: 80vh; /* Например, 40% высоты экрана */
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный фон */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%; /* Центрируем по вертикали */
+    left: 50%; /* Центрируем по горизонтали */
+    transform: translate(-50%, -50%); /* Смещаем на половину ширины и высоты */
+    z-index: 20; /* Убедитесь, что это выше игрового поля */
+    display: none; /* Скрываем по умолчанию */
 }
 
 
 
-#number0{
+
+
+
+
+
+  /* #number0{
     grid-column: span 3;
-    max-height: 10vh;
-}
+    height: 15vh;
+    height: 100%; 
+    margin: 0;  
+    padding: 0;   
+    box-sizing: border-box; 
+} */
+
+/* .welcome-screen {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; 
+  } */
+
+/* .gameButton{
+    width: 100%; 
+    height: 100%; 
+    aspect-ratio: 1 / 1; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */

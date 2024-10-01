@@ -6,26 +6,41 @@
     <link rel="stylesheet" href="mainCss.css">
 </head>
 <body>
+    <!-- <div id="welcome-screen" class="welcome-screen">
+        <div class="welcome-box">
+        <h1>Добро пожаловать в игру!</h1>
+        <button id="start-button">Новая игра</button>
+      </div></div> -->
+
     <div class="calculator">
-
+        <div class="welcome-box" id="welcome-box">
+            <h1>Добро пожаловать в игру!</h1>
+            <button id="start-button">Играть</button>
+          </div>
 	<div id="operator_number">
-        <button id="button1">1(0)</button>
-        <button id="button2">2(1)</button>
-        <button id="button3">3(2)</button>
+        <button class="gameButton" id="button1">1(0)</button>
+        <button class="gameButton" id="button2">2(1)</button>
+        <button class="gameButton" id="button3">3(2)</button>
 
-        <button id="button4">4(3)</button>
-        <button id="button5">5(4)</button>
-        <button id="button6">6(5)</button>
+        <button class="gameButton" id="button4">4(3)</button>
+        <button class="gameButton" id="button5">5(4)</button>
+        <button class="gameButton" id="button6">6(5)</button>
         
-        <button id="button7">7(6)</button>
-        <button id="button8">8(7)</button>
-        <button id="button9">9(8)</button>
-        <!-- <button id="number0">0</button> -->
+        <button class="gameButton" id="button7">7(6)</button>
+        <button class="gameButton" id="button8">8(7)</button>
+        <button class="gameButton" id="button9">9(8)</button>
+        <!-- <button class="gameButton" id="number0">0</button> -->
         </div> 
+
+        <div class="bye-box" id="bye-box" style="display: none;">
+            <h1 id="bye-message">Игра окончена!</h1>
+            <button id="bye-button">Новая игра</button>
+          </div>
 
 </div>
 
 <script src="mainCalculatorScript.js"></script>
 <script src="checkWin.js"></script>
+<script src="interface.js"></script>
 </body>
 </html>
